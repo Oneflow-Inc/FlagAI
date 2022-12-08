@@ -9,7 +9,7 @@ from functools import partial
 from tqdm import tqdm
 from flowvision.utils import make_grid
 from pytorch_lightning.utilities.distributed import rank_zero_only
-from flagai.model.mm.utils import exists, default, ismap, isimage, mean_flat, count_params, instantiate_from_config, instantiate_from_config2, log_txt_as_img
+from flagai.model.mm.utils import exists, default, ismap, isimage, mean_flat, count_params, instantiate_from_config, log_txt_as_img
 from flagai.model.mm.autoencoders import VQModelInterface, IdentityFirstStage, AutoencoderKL
 from flagai.model.mm.utils import make_beta_schedule, extract_into_tensor, noise_like
 from flagai.model.mm.Sampler import DDIMSampler
@@ -624,7 +624,7 @@ class LatentDiffusion(DDPM):
         for param in self.first_stage_model.parameters():
             param.requires_grad = False
     def instantiate_cond_stage(self, config):
-        model = instantiate_from_config2(config)
+        model = instantiate_from_config(config)
         self.cond_stage_model = model.eval()
         self.cond_stage_model.train = disabled_train
         for param in self.cond_stage_model.parameters():

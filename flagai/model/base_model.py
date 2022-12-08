@@ -57,13 +57,8 @@ class BaseModel(Module):
         # ==============OneFlow load from pytorch pretrained model============
         new_parameters = dict()
         for key,value in sd.items():
-            # print("key: >>>>>>> ", key)
-            # val = value.detach().cpu().numpy()
-            # new_parameters[key] = torch.tensor(val)
             if "num_batches_tracked" not in key:
-            # if "num_batches_tracked" not in key:
                 val = value.detach().cpu().numpy()
-                # new_parameters[key] = val
                 new_parameters[key] = torch.tensor(val)
         m, u = model.load_state_dict(new_parameters, strict=True)
         # ==============OneFlow load from pytorch pretrained model============
