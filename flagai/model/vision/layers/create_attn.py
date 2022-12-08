@@ -2,7 +2,7 @@
 
 Hacked together by / Copyright 2021 Ross Wightman
 """
-import torch
+import oneflow as torch
 from functools import partial
 
 from .bottleneck_attn import BottleneckAttn

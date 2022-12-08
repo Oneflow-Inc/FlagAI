@@ -10,7 +10,7 @@ from typing import Union, List
 
 import ftfy
 import regex as re
-import torch
+import oneflow as torch
 
 
 @lru_cache()

@@ -1,6 +1,6 @@
 from transformers.models.clip.modeling_clip import *
-import torch.nn as nn
-import torch
+import oneflow.nn as nn
+import oneflow as torch
 from transformers.models.clip.modeling_clip import CLIPOutput
 from transformers import CLIPProcessor
 import os

@@ -1,8 +1,8 @@
 """ Linear layer (alternate definition)
 """
-import torch
-import torch.nn.functional as F
-from torch import nn as nn
+import oneflow as torch
+import oneflow.nn.functional as F
+from oneflow import nn as nn
 
 
 class Linear(nn.Linear):

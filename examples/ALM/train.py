@@ -4,13 +4,13 @@
 import pandas as pd
 import os
 import numpy as np
-import torch
-from torch.utils.data import Dataset
+import oneflow as torch
+from oneflow.utils.data import Dataset
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.trainer import Trainer
 from tqdm import tqdm 
 from rouge_score import rouge_scorer
-from torch import argmax
+from oneflow import argmax
 import sacrebleu
 
 

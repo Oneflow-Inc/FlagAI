@@ -1,14 +1,14 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 import os
 from flagai.model.blocks.gpt2_block import GPT2Block
 from flagai.model.layers.embeddings import VocabParallelEmbedding
 from flagai.model.utils import normal_init_method
 from flagai.model.base_model import BaseModel
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 
 if os.getenv('ENV_TYPE') == 'deepspeed+mpu':
     from flagai.mpu.utils import divide

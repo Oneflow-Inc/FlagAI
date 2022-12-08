@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 import urllib
 import io
 from PIL import Image

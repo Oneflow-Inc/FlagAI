@@ -5,7 +5,7 @@ import os
 import json
 import random
 from re import T
-import torch.utils.data
+import oneflow.utils.data
 import numpy as np
 from ..data_utils import InputExample
 import zipfile

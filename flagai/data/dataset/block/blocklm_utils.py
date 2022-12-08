@@ -1,8 +1,8 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
-import torch.utils.data
+import oneflow as torch
+import oneflow.utils.data
 # import mpu
 import random
 import copy

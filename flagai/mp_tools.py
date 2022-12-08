@@ -3,7 +3,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 import sys
 import os
-import torch
+import oneflow as torch
 import copy
 
 from_1_to_n_models = {

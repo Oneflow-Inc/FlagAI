@@ -1,11 +1,11 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
+import oneflow as torch
 try:
     from apex.optimizers import FusedAdam as Adam
 except:
-    from torch.optim import Adam
+    from oneflow.optim import Adam
 from .fp16 import FP16_Optimizer
 
 

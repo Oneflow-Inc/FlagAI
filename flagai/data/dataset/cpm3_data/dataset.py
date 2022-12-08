@@ -1,5 +1,5 @@
-import torch
-import torch.utils.data as data
+import oneflow as torch
+import oneflow.utils.data as data
 from .indexed import MMapIndexedDataset
 import random
 import numpy as np

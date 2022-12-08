@@ -21,7 +21,7 @@
 
 import itertools
 import logging
-import torch 
+import oneflow as torch 
 logger = logging.getLogger(__name__)
 from flagai.data.tokenizer.tokenizer import CommandToken
 from flagai.data.tokenizer.uni_tokenizer.wp_tokenizer import WordpieceTokenizer

@@ -2,8 +2,8 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 import numpy as np
-import torch
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn.functional as F
 from flagai.model.predictor.utils import viterbi_decode, decode_labels, bert_beamsearch,\
     t5_random_sample, gpt_random_sample, \
     t5_beamsearch, gpt_beamsearch, bert_random_sample, glm_beamsearch, glm_random_sample, cpm_beamsearch, alm_beamsearch, alm_random_sample
@@ -343,7 +343,7 @@ class Predictor:
                                 scale: float = 7.5,
                                 from_file: str = None,
                                 seed: int = 34234):
-        from torchvision.utils import make_grid
+        from flowvision.utils import make_grid
         from pytorch_lightning import seed_everything
         from flagai.model.predictor.utils import chunk, check_safety, get_safety_checker
         safety_checker, safety_feature_extractor = get_safety_checker()

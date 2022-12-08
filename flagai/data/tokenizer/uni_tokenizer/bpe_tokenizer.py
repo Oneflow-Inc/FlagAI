@@ -23,7 +23,7 @@ import logging
 import regex as re
 import json
 from typing import Union, List
-import torch
+import oneflow as torch
 import html
 import os
 import ftfy

@@ -3,9 +3,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 # layer norm
 
-import torch
+import oneflow as torch
 
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 
 import bmtrain as bmt
 

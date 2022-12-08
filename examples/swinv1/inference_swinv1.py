@@ -1,9 +1,9 @@
 import os
-import torch
-import torchvision.datasets as datasets
+import oneflow as torch
+import flowvision.datasets as datasets
 from flagai.auto_model.auto_loader import AutoLoader
-from torch.utils.data import DataLoader
-from torchvision import transforms
+from oneflow.utils.data import DataLoader
+from flowvision import transforms
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 data_path = "./imagenet2012/"

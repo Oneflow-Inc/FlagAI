@@ -3,7 +3,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 # construct data
 # data from https://github.com/murufeng/ChineseNlpCorpus
-import torch
+import oneflow as torch
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.model.predictor.predictor import Predictor
 import pandas as pd

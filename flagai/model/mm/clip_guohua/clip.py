@@ -2,7 +2,7 @@
 
 from typing import Union, List
 
-import torch
+import oneflow as torch
 
 from .bert_tokenizer import FullTokenizer
 _tokenizer = FullTokenizer()

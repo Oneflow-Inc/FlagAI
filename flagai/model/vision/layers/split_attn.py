@@ -6,9 +6,9 @@ Adapted from original PyTorch impl at https://github.com/zhanghang1989/ResNeSt
 
 Modified for torchscript compat, performance, and consistency with timm by Ross Wightman
 """
-import torch
-import torch.nn.functional as F
-from torch import nn
+import oneflow as torch
+import oneflow.nn.functional as F
+from oneflow import nn
 
 from .helpers import make_divisible
 

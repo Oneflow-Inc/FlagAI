@@ -23,10 +23,10 @@
 # Parts of the code here are adapted from PyTorch
 # repo: https://github.com/pytorch/pytorch
 import contextlib
-import torch.distributed as dist
-import torch
-from torch import _C
-from torch.cuda import _lazy_call, device as device_ctx_manager
+import oneflow.distributed as dist
+import oneflow
+from oneflow import _C
+from oneflow.cuda import _lazy_call, device as device_ctx_manager
 #from torch.utils.checkpoint import detach_variable
 
 PARTITION_ACTIVATIONS = False

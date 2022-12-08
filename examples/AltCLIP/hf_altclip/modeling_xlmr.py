@@ -1,13 +1,13 @@
-import torch.nn as nn
-import torch
-from transformers.models.xlm_roberta.modeling_xlm_roberta import XLMRobertaModel
-from transformers.models.roberta.modeling_roberta import RobertaLMHead,RobertaPreTrainedModel
-from transformers.activations import ACT2FN
+import oneflow.nn as nn
+import oneflow as torch
+from transformers.models.xlm_roberta.modeling_xlm_roberta import OneFlowXLMRobertaModel
+from transformers.models.roberta.modeling_roberta import OneFlowRobertaLMHead,OneFlowRobertaPreTrainedModel
+from transformers.activations_oneflow import ACT2FN
 from typing import Optional
 from .configuration_altclip import RobertaSeriesConfig
 
 
-class RobertaSeriesModelWithTransformation(RobertaPreTrainedModel):
+class RobertaSeriesModelWithTransformation(OneFlowRobertaPreTrainedModel):
 
     _keys_to_ignore_on_load_unexpected = [r"pooler"]
     _keys_to_ignore_on_load_missing = [r"position_ids", r"predictions.decoder.bias"]
@@ -15,14 +15,14 @@ class RobertaSeriesModelWithTransformation(RobertaPreTrainedModel):
 
     def __init__(self, config):
         super().__init__(config)
-        self.roberta = XLMRobertaModel(config)
+        self.roberta = OneFlowXLMRobertaModel(config)
         self.transformation = nn.Linear(config.hidden_size,config.project_dim)
         self.pre_LN = nn.LayerNorm(config.hidden_size, eps=config.layer_norm_eps)
         # we turn True only when we do postkd, otherwise it should be turn False 
         self.add_lm_task = config.add_lm_task if hasattr(config,"add_lm_task") else False
         self.config.tie_word_embeddings = self.add_lm_task
         if self.add_lm_task:
-            self.lm_head = RobertaLMHead(config)
+            self.lm_head = OneFlowRobertaLMHead(config)
         self.pooler = lambda x: x[:,0]
         self.post_init()
         

@@ -1,6 +1,6 @@
 import time
 import random
-import torch
+import oneflow as torch
 import bmtrain as bmp
 from bmtrain import nccl
 from bmtrain.global_var import config

@@ -5,8 +5,8 @@ Paper: MixConv: Mixed Depthwise Convolutional Kernels (https://arxiv.org/abs/190
 Hacked together by / Copyright 2020 Ross Wightman
 """
 
-import torch
-from torch import nn as nn
+import oneflow as torch
+from oneflow import nn as nn
 
 from .conv2d_same import create_conv2d_pad
 

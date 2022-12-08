@@ -4,7 +4,7 @@
 import logging
 import sys
 import os
-import torch.distributed as dist
+import oneflow.distributed as dist
 
 log_levels = {
     "debug": logging.DEBUG,

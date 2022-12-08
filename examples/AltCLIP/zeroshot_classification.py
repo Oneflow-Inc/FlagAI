@@ -6,8 +6,8 @@ import logging
 from contextlib import suppress
 from typing import Callable
 
-import torch
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn.functional as F
 from tqdm import tqdm
 
 from sklearn.metrics import classification_report, balanced_accuracy_score

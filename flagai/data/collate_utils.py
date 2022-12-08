@@ -2,7 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 import numpy as np
-import torch
+import oneflow as torch
 
 
 def padding(indice, max_length, pad_idx=0):

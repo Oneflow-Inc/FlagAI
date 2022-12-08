@@ -23,7 +23,7 @@ import re
 from typing import Dict, List, Optional
 import numpy as np
 import random
-import torch
+import oneflow as torch
 import sys
 
 sys.path.append("../../../")

@@ -1,5 +1,5 @@
-import torch
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn.functional as F
 import numpy as np
 import math
 

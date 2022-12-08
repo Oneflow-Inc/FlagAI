@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import torch
+import oneflow as torch
 import math
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 
 class CPM3Linear(torch.nn.Module):
     r"""A fully connected layer, which performs :math:`\pmb{y} = \mathbf{W} \pmb{x} + \pmb{b}`

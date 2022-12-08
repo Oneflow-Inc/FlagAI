@@ -24,8 +24,8 @@ import os
 import sys
 from io import open
 
-import torch
-from torch import nn
+import oneflow as torch
+from oneflow import nn
 
 from .configuration_bert import BertConfig
 if sys.version_info[0] >= 3:

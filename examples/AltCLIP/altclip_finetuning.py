@@ -1,11 +1,11 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
+import oneflow as torch
 from flagai.auto_model.auto_loader import AutoLoader
 import os 
 from flagai.trainer import Trainer
-from torchvision.datasets import (
+from flowvision.datasets import (
     CIFAR10
 )
 

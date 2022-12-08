@@ -2,9 +2,9 @@
 """
 from typing import Union, List
 
-import torch
-from torch import nn as nn
-from torch.nn import functional as F
+import oneflow as torch
+from oneflow import nn as nn
+from oneflow.nn import functional as F
 
 from .trace_utils import _assert
 from .create_act import get_act_layer

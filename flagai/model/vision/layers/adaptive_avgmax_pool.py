@@ -9,9 +9,9 @@ Both a functional and a nn.Module version of the pooling is provided.
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 
 
 def adaptive_pool_feat_mult(pool_type='avg'):

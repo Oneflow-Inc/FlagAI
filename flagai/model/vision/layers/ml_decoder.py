@@ -1,9 +1,9 @@
 from typing import Optional
 
-import torch
-from torch import nn
-from torch import nn, Tensor
-from torch.nn.modules.transformer import _get_activation_fn
+import oneflow as torch
+from oneflow import nn
+from oneflow import nn, Tensor
+from oneflow.nn.modules.transformer import _get_activation_fn
 
 
 def add_ml_decoder_head(model):

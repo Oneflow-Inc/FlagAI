@@ -16,9 +16,9 @@
 # limitations under the License.
 
 import math
-import torch
+import oneflow as torch
 from packaging import version
-from torch import Tensor, nn
+from oneflow import Tensor, nn
 
 
 class NewGELUActivation(nn.Module):

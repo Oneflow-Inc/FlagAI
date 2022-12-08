@@ -18,15 +18,15 @@
 """attentions."""
 import os
 import math
-import torch
+import oneflow as torch
 try:
     import deepspeed
 except:
     pass
-from torch import nn
-import torch.nn.init as init
-import torch.nn.functional as F
-from torch.nn import Linear
+from oneflow import nn
+import oneflow.nn.init as init
+import oneflow.nn.functional as F
+from oneflow.nn import Linear
 from flagai.model.layers.layer_norm import BertLayerNorm
 from flagai.model.layers.layer_norm import T5LayerNorm
 from flagai.model.layers.feedforward import ColumnParallelLinear, RowParallelLinear

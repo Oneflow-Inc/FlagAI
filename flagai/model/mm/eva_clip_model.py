@@ -11,9 +11,9 @@ from functools import partial
 import numpy as np
 from collections import OrderedDict
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 
 from flagai.model.base_model import BaseModel
 from ..layers.activations import QuickGELUActivation # NOTE This is slower than nn.GELU or nn.SiLU and uses more GPU memory

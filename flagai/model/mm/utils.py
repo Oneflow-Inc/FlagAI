@@ -2,7 +2,7 @@ from itertools import repeat
 import collections.abc
 import importlib
 
-import torch
+import oneflow as torch
 import numpy as np
 from collections import abc
 from einops import rearrange
@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 import os
 import math
-import torch.nn as nn
+import oneflow.nn as nn
 import numpy as np
 from einops import repeat
 
@@ -111,6 +111,14 @@ def instantiate_from_config(config):
         raise KeyError("Expected key `target` to instantiate.")
     return get_obj_from_str(config["target"])(**config.get("params", dict()))
 
+def instantiate_from_config2(config):
+    if not "target" in config:
+        if config == '__is_first_stage__':
+            return None
+        elif config == "__is_unconditional__":
+            return None
+        raise KeyError("Expected key `target` to instantiate.")
+    return get_obj_from_str2(config["target"])(**config.get("params", dict()))
 
 def get_obj_from_str(string, reload=False):
     module, cls = string.rsplit(".", 1)
@@ -119,6 +127,12 @@ def get_obj_from_str(string, reload=False):
         importlib.reload(module_imp)
     return getattr(importlib.import_module(module, package=None), cls)
 
+def get_obj_from_str2(string, reload=False):
+    module, cls = string.rsplit(".", 1)
+    if reload:
+        module_imp = importlib.import_module(module)
+        importlib.reload(module_imp)
+    return getattr(importlib.import_module(module, package=None), cls)
 
 def _do_parallel_data_prefetch(func, Q, data, idx, idx_to_fn=False):
     # create dummy dataset instance
@@ -293,10 +307,12 @@ def make_ddim_sampling_parameters(alphacums,
     alphas = alphacums[ddim_timesteps]
     alphas_prev = np.asarray([alphacums[0]] +
                              alphacums[ddim_timesteps[:-1]].tolist())
+    alphas_prev_tensor = torch.tensor(alphas_prev)
 
     # according the the formula provided in https://arxiv.org/abs/2010.02502
+    # TODO:(oneflow) tensor / numpy(ndarray) TypeError
     sigmas = eta * np.sqrt(
-        (1 - alphas_prev) / (1 - alphas) * (1 - alphas / alphas_prev))
+        (1 - alphas_prev_tensor) / (1 - alphas) * (1 - alphas / alphas_prev_tensor))
     if verbose:
         print(
             f'Selected alphas for ddim sampler: a_t: {alphas}; a_(t-1): {alphas_prev}'
@@ -343,6 +359,7 @@ def checkpoint(func, inputs, params, flag):
                    explicitly take as arguments.
     :param flag: if False, disable gradient checkpointing.
     """
+    flag=False
     if flag:
         args = tuple(inputs) + tuple(params)
         return CheckpointFunction.apply(func, len(inputs), *args)

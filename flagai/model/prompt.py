@@ -2,7 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 import random
-import torch
+import oneflow as torch
 
 
 class PromptSpell(torch.nn.Module):

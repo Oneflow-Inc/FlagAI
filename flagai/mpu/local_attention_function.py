@@ -1,9 +1,9 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
-from torch import nn
-import torch.nn.functional as F
+import oneflow as torch
+from oneflow import nn
+import oneflow.nn.functional as F
 from torch.autograd import Function
 from localAttention import (similar_forward, similar_backward,
                             weighting_forward, weighting_backward_ori,

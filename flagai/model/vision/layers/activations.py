@@ -6,9 +6,9 @@ easily be swapped. All have an `inplace` arg even if not used.
 Hacked together by / Copyright 2020 Ross Wightman
 """
 
-import torch
-from torch import nn as nn
-from torch.nn import functional as F
+import oneflow as torch
+from oneflow import nn as nn
+from oneflow.nn import functional as F
 
 
 def swish(x, inplace: bool = False):

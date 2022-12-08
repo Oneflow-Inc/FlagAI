@@ -7,7 +7,7 @@ import requests
 import json
 import os
 
-import torch
+import oneflow as torch
 from tqdm.auto import tqdm
 
 

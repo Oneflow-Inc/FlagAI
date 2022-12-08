@@ -2,7 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 from flagai.model.predictor.predictor import Predictor
-import torch
+import oneflow as torch
 from flagai.model.glm_model import GLMForSeq2Seq
 from flagai.data.tokenizer import Tokenizer
 import unittest

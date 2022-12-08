@@ -18,7 +18,7 @@
 """attentions."""
 import os
 import math
-import torch
+import oneflow as torch
 
 from flagai.model.layers.layer_norm_bmt import CPM3bmtLayerNorm
 

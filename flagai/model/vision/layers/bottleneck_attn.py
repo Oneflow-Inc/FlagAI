@@ -16,9 +16,9 @@ Hacked together by / Copyright 2021 Ross Wightman
 """
 from typing import List
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 
 from .helpers import to_2tuple, make_divisible
 from .weight_init import trunc_normal_

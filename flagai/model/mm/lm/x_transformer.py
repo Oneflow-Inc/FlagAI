@@ -1,7 +1,7 @@
 """shout-out to https://github.com/lucidrains/x-transformers/tree/main/x_transformers"""
-import torch
-from torch import nn, einsum
-import torch.nn.functional as F
+import oneflow as torch
+from oneflow import nn, einsum
+import oneflow.nn.functional as F
 from functools import partial
 from inspect import isfunction
 from collections import namedtuple

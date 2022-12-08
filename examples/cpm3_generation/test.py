@@ -1,7 +1,7 @@
 from flagai.data.tokenizer.cpm_3.cpm3_tokenizer import CPM3Tokenizer
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.model.predictor.predictor import Predictor
-import torch
+import oneflow as torch
 import json
 
 

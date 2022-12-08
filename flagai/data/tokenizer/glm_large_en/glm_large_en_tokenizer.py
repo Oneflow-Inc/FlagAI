@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Utilities for using and training tokenizers (char, wordpiece, sentencepiece)"""
-import torch
+import oneflow as torch
 from ..tokenizer import GLMTokenizer, TypeToken, CommandToken
 from .wordpiece import GLMLargeEnTokenizer
 

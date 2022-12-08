@@ -4,9 +4,9 @@
 import json
 import os
 from typing import List
-import torch
+import oneflow as torch
 import numpy as np
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 import time
 from PIL import Image
 from itertools import islice

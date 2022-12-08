@@ -1,10 +1,10 @@
-import torch
+import oneflow as torch
 import pytorch_lightning as pl
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 from contextlib import contextmanager
 
 from taming.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
-from torch.optim.lr_scheduler import LambdaLR
+from oneflow.optim.lr_scheduler import LambdaLR
 from flagai.model.mm.model import Encoder, Decoder
 import numpy as np
 from flagai.model.mm.utils import instantiate_from_config

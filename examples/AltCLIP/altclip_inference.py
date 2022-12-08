@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 from PIL import Image
 from flagai.auto_model.auto_loader import AutoLoader
 

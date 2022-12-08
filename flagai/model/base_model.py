@@ -1,8 +1,9 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-from torch.nn import Module
-import torch
+from oneflow.nn import Module
+import torch as pytorch
+import oneflow as torch
 import json
 from typing import Union
 from flagai.model.file_utils import _get_model_id, _get_checkpoint_path, _get_vocab_path, _get_model_files
@@ -44,14 +45,28 @@ class BaseModel(Module):
                                     model,
                                     pretrained_model_name_or_path,
                                     verbose=False):
-        pl_sd = torch.load(pretrained_model_name_or_path, map_location="cpu")
+        pl_sd = pytorch.load(pretrained_model_name_or_path, map_location="cpu")
         if "state_dict" in pl_sd:
             sd = pl_sd["state_dict"]
         else:
             sd = pl_sd
         if "global_step" in pl_sd:
             print(f"Global Step: {pl_sd['global_step']}")
-        m, u = model.load_state_dict(sd, strict=True)
+        
+        # m, u = model.load_state_dict(sd, strict=True)
+        # ==============OneFlow load from pytorch pretrained model============
+        new_parameters = dict()
+        for key,value in sd.items():
+            # print("key: >>>>>>> ", key)
+            # val = value.detach().cpu().numpy()
+            # new_parameters[key] = torch.tensor(val)
+            if "num_batches_tracked" not in key:
+            # if "num_batches_tracked" not in key:
+                val = value.detach().cpu().numpy()
+                # new_parameters[key] = val
+                new_parameters[key] = torch.tensor(val)
+        m, u = model.load_state_dict(new_parameters, strict=True)
+        # ==============OneFlow load from pytorch pretrained model============
         if len(m) > 0 and verbose:
             print("missing keys:")
             print(m)

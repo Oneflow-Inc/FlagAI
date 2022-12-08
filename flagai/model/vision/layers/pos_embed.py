@@ -1,8 +1,8 @@
 import math
 from typing import List, Tuple, Optional, Union
 
-import torch
-from torch import nn as nn
+import oneflow as torch
+from oneflow import nn as nn
 
 
 def pixel_freq_bands(

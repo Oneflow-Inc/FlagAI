@@ -1,6 +1,6 @@
 import os
-import torch
-from torchvision.datasets import CIFAR100
+import oneflow as torch
+from flowvision.datasets import CIFAR100
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.data.dataset.mm.clip_dataset import clip_transform
 

@@ -1,8 +1,8 @@
 import os
-import torch
-import torchvision.datasets as datasets
+import oneflow as torch
+import flowvision.datasets as datasets
 from flagai.auto_model.auto_loader import AutoLoader
-from torchvision import transforms
+from flowvision import transforms
 from flagai.trainer import Trainer
 
 data_path = "./imagenet2012/"

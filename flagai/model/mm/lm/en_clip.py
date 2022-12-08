@@ -1,5 +1,5 @@
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 from functools import partial
 import clip
 from einops import rearrange, repeat

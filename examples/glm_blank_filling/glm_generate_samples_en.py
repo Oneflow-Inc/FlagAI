@@ -2,7 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 
-import torch
+import oneflow as torch
 from flagai.model.predictor.predictor import Predictor
 from flagai.auto_model.auto_loader import AutoLoader
 if __name__ == "__main__":

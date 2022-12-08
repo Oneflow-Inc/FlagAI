@@ -1,7 +1,7 @@
 # pytorch_diffusion + derived encoder decoder
 import math
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 import numpy as np
 from einops import rearrange
 from flagai.model.mm.utils import instantiate_from_config

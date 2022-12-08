@@ -17,7 +17,7 @@
 # limitations under the License.
 """Utilities for using and training tokenizers (char, wordpiece, sentencepiece)"""
 
-import torch
+import oneflow as torch
 from ..tokenizer import GLMTokenizer, TypeToken, CommandToken
 from . import glm_large_ch
 

@@ -1,9 +1,9 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 
 
 class CRFLayer(nn.Module):

@@ -19,7 +19,7 @@
 
 import copy
 import warnings
-import torch
+import oneflow as torch
 import os
 from torch import nn
 from torch.nn import CrossEntropyLoss

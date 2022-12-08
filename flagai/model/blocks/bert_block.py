@@ -17,8 +17,8 @@
 # limitations under the License.
 """Transformer."""
 import os
-import torch
-from torch.nn import Linear
+import oneflow as torch
+from oneflow.nn import Linear
 from flagai.model.layers.activations import ACT2FN
 from flagai.model.layers.attentions import BertAttention
 from flagai.model.layers.feedforward import ColumnParallelLinear

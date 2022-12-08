@@ -10,9 +10,9 @@ versions if they contain in-place ops.
 Hacked together by / Copyright 2020 Ross Wightman
 """
 
-import torch
-from torch import nn as nn
-from torch.nn import functional as F
+import oneflow as torch
+from oneflow import nn as nn
+from oneflow.nn import functional as F
 
 
 @torch.jit.script

@@ -2,7 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 
-import torch
+import oneflow as torch
 
 from flagai.model.glm_model import GLMModel
 from flagai.data.tokenizer import Tokenizer

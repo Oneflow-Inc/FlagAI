@@ -3,8 +3,8 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 from flagai.trainer import Trainer
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-from torch.utils.data import Dataset
-import torch
+from oneflow.utils.data import Dataset
+import oneflow as torch
 import os
 
 class MyTrainer(Trainer):

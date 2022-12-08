@@ -3,7 +3,7 @@ import struct
 from itertools import accumulate
 
 import numpy as np
-import torch
+import oneflow as torch
 
 dtypes = {
     1: np.uint8,

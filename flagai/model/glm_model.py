@@ -17,9 +17,9 @@
 # limitations under the License.
 import os
 
-import torch
-from torch import nn
-import torch.nn.functional as F
+import oneflow as torch
+from oneflow import nn
+import oneflow.nn.functional as F
 from flagai.logger import log_dist
 from flagai.model.blocks.glm_block import GLMBlock
 from flagai.model.utils import scaled_init_method, divide, unscaled_init_method

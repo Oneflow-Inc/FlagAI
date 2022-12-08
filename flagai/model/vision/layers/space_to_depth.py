@@ -1,5 +1,5 @@
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 
 
 class SpaceToDepth(nn.Module):

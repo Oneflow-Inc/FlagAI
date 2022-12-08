@@ -34,8 +34,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 import math
-from torch import nn
-import torch.nn.functional as F
+from oneflow import nn
+import oneflow.nn.functional as F
 
 
 from .create_act import create_act_layer

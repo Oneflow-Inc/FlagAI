@@ -23,10 +23,10 @@ import math
 from functools import partial
 from typing import Optional
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.utils.checkpoint
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
+import oneflow.utils.checkpoint
 from typing import Callable
 from flagai.model.vision.layers.patch_embed import PatchEmbed
 from flagai.model.vision.layers.mlp import Mlp

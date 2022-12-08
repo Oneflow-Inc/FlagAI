@@ -16,13 +16,13 @@
 import random
 from typing import List, Optional, Tuple, Union
 
-import torch
-import torch.utils.checkpoint
-from torch import nn
-from torch.nn import CrossEntropyLoss
+import oneflow as torch
+import oneflow.utils.checkpoint
+from oneflow import nn
+from oneflow.nn import CrossEntropyLoss
 from flagai.model.layers.activations import ACT2FN
 from flagai.model.gpt2_model import GPT2Model, GPT2Stack, GPT2Config
-from torch.utils.checkpoint import checkpoint
+from oneflow.utils.checkpoint import checkpoint
 
 OPT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "facebook/opt-125m",

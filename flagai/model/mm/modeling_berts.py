@@ -1,8 +1,8 @@
-from transformers import BertPreTrainedModel,BertModel,BertConfig
-import torch.nn as nn
-import torch
+from transformers import OneFlowBertPreTrainedModel,OneFlowBertModel,BertConfig
+import oneflow.nn as nn
+import oneflow as torch
 from transformers.models.xlm_roberta.configuration_xlm_roberta import XLMRobertaConfig
-from transformers import XLMRobertaModel
+from transformers import OneFlowXLMRobertaModel
 from typing import Optional
 
 class BertSeriesConfig(BertConfig):
@@ -21,7 +21,7 @@ class RobertaSeriesConfig(XLMRobertaConfig):
         self.learn_encoder = learn_encoder
 
 
-class BertSeriesModelWithTransformation(BertPreTrainedModel):
+class BertSeriesModelWithTransformation(OneFlowBertPreTrainedModel):
 
     _keys_to_ignore_on_load_unexpected = [r"pooler"]
     _keys_to_ignore_on_load_missing = [r"position_ids", r"predictions.decoder.bias"]
@@ -55,9 +55,9 @@ class BertSeriesModelWithTransformation(BertPreTrainedModel):
             config.learn_encoder = False
         super().__init__(config)
         if config.model_type == 'bert':
-            self.bert = BertModel(config)
+            self.bert = OneFlowBertModel(config)
         elif config.model_type == 'xlm-roberta':
-            self.roberta = XLMRobertaModel(config)
+            self.roberta = OneFlowXLMRobertaModel(config)
         self.transformation = nn.Linear(config.hidden_size,config.project_dim)
         self.learn_encoder = config.learn_encoder
         if config.learn_encoder:

@@ -3,8 +3,8 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 import os
 import numpy as np
-import torch
-from torch.utils.data import Dataset
+import oneflow as torch
+from oneflow.utils.data import Dataset
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.env_trainer import EnvTrainer
 from flagai.env_args import EnvArgs

@@ -3,7 +3,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 # feedforward
 import os
-import torch
+import oneflow as torch
 
 from flagai.model.layers.linear_bmt import CPM3bmtLinear
 

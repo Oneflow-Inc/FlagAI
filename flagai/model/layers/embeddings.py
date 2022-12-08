@@ -19,11 +19,11 @@
 # Parts of the code here are adapted from PyTorch
 # repo: https://github.com/pytorch/pytorch
 
-import torch
-import torch.nn.functional as F
-import torch.nn.init as init
-from torch.nn.parameter import Parameter
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn.functional as F
+import oneflow.nn.init as init
+from oneflow.nn.parameter import Parameter
+import oneflow.nn as nn
 import os
 from .layer_norm import BertLayerNorm
 

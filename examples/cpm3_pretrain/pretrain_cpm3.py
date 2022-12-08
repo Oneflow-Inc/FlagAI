@@ -1,6 +1,6 @@
 import time
 import random
-import torch
+import oneflow as torch
 import bmtrain as bmp
 from bmtrain import nccl
 from bmtrain.global_var import config
@@ -11,7 +11,7 @@ from flagai.data.tokenizer.cpm_3 import CPM3Tokenizer
 from flagai.data.dataset.cpm3_data import DistributedMMapIndexedDataset, CPM3_Dataset_Merge
 from arguments import get_args
 import distutils.version
-from torch.utils.tensorboard import SummaryWriter
+from oneflow.utils.tensorboard import SummaryWriter
 
 task_ids = {
         'lm':0,

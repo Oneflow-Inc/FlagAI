@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 from flagai.model.layers.attentions import CPM3SelfAttention
 from flagai.model.layers.attentions_bmt import CPM3bmtSelfAttention
 from flagai.model.layers.attentions import CPM3CrossAttention

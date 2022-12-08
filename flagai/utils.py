@@ -20,11 +20,11 @@ import os
 import random
 import time
 import numpy as np
-import torch
+import oneflow as torch
 import subprocess
 from flagai import mpu
 from flagai.logger import log_dist
-import torch.distributed as dist
+import oneflow.distributed as dist
 
 
 def get_hostname():

@@ -3,7 +3,7 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 from flagai.auto_model.auto_loader import AutoLoader
 from flagai.model.predictor.predictor import Predictor
-import torch
+import oneflow as torch
 from flagai.data.tokenizer import Tokenizer
 from flagai.model.bert_model import BertModel, BertForSeq2seq, \
                                     BertForSequenceLabeling, \

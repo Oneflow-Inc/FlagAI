@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import torch
+import oneflow as torch
 from torch.optim.lr_scheduler import _LRScheduler
 import math
 

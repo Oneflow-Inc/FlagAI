@@ -3,8 +3,8 @@ import os
 if os.getenv('ENV_TYPE') == 'deepspeed':
     from deepspeed.runtime.activation_checkpointing.checkpointing import checkpoint
 else:
-    from torch.utils.checkpoint import checkpoint
-import torch
+    from oneflow.utils.checkpoint import checkpoint
+import oneflow as torch
 from itertools import chain
 
 def checkpoint_seq(

@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 from flagai.model.blocks.cpm_block import CPM3Block
 from flagai.model.layers.layer_norm import CPM3LayerNorm
 from flagai.model.layers.embeddings import CPM3Embedding

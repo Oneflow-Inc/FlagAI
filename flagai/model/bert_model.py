@@ -23,7 +23,7 @@ from flagai.model.layers.feedforward import BertPooler
 from flagai.model.base_model import BaseModel
 from flagai.model.layers.activations import ACT2FN
 from flagai.model.layers.global_pointer import GlobalPointer
-import torch
+import oneflow as torch
 from flagai.model.layers.crf import CRFLayer
 from torch import nn
 from typing import List

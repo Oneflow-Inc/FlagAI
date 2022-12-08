@@ -1,8 +1,8 @@
-import torch
+import oneflow as torch
 import os
-from torchvision import transforms
-from torch.utils.data import Dataset, DataLoader
-import torchvision.datasets as datasets
+from flowvision import transforms
+from oneflow.utils.data import Dataset, DataLoader
+import flowvision.datasets as datasets
 from tqdm import tqdm
 from flagai.auto_model.auto_loader import AutoLoader
 

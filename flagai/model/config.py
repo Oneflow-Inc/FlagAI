@@ -7,7 +7,7 @@ import json
 import os
 import copy
 from typing import Any, Dict, Tuple, Union
-import torch
+import oneflow as torch
 
 
 class Config(object):

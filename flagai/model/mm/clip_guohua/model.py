@@ -4,9 +4,9 @@ from typing import Tuple, Union
 import os
 import json
 import numpy as np
-import torch
-import torch.nn.functional as F
-from torch import nn
+import oneflow as torch
+import oneflow.nn.functional as F
+from oneflow import nn
 from .modeling_bert import BertModel
 from .configuration_bert import BertConfig
 from flagai.model.base_model import BaseModel

@@ -1,15 +1,15 @@
 import sys
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 import numpy as np
-from torch.optim.lr_scheduler import LambdaLR
+from oneflow.optim.lr_scheduler import LambdaLR
 from einops import rearrange, repeat
 from contextlib import contextmanager
 from functools import partial
 from tqdm import tqdm
-from torchvision.utils import make_grid
+from flowvision.utils import make_grid
 from pytorch_lightning.utilities.distributed import rank_zero_only
-from flagai.model.mm.utils import exists, default, ismap, isimage, mean_flat, count_params, instantiate_from_config, log_txt_as_img
+from flagai.model.mm.utils import exists, default, ismap, isimage, mean_flat, count_params, instantiate_from_config, instantiate_from_config2, log_txt_as_img
 from flagai.model.mm.autoencoders import VQModelInterface, IdentityFirstStage, AutoencoderKL
 from flagai.model.mm.utils import make_beta_schedule, extract_into_tensor, noise_like
 from flagai.model.mm.Sampler import DDIMSampler
@@ -541,6 +541,9 @@ class LatentDiffusion(DDPM):
             conditioning_key = 'concat' if concat_mode else 'crossattn'
         if cond_stage_config == '__is_unconditional__':
             conditioning_key = None
+        
+        # conditioning_key:crossattn 
+
 
         ckpt_path = kwargs.pop("ckpt_path", None)
         ignore_keys = kwargs.pop("ignore_keys", [])
@@ -621,7 +624,7 @@ class LatentDiffusion(DDPM):
         for param in self.first_stage_model.parameters():
             param.requires_grad = False
     def instantiate_cond_stage(self, config):
-        model = instantiate_from_config(config)
+        model = instantiate_from_config2(config)
         self.cond_stage_model = model.eval()
         self.cond_stage_model.train = disabled_train
         for param in self.cond_stage_model.parameters():

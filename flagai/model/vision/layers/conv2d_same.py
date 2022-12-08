@@ -2,9 +2,9 @@
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 from typing import Tuple, Optional
 
 from .padding import pad_same, get_padding_value

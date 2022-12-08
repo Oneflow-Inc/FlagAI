@@ -24,7 +24,7 @@ import re
 import unicodedata
 import six
 from functools import lru_cache
-import torch
+import oneflow as torch
 import os
 from typing import Union, List
 

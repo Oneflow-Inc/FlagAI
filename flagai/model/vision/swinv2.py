@@ -9,10 +9,10 @@
 # Written by Ze Liu
 # --------------------------------------------------------
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.utils.checkpoint as checkpoint
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
+import oneflow.utils.checkpoint as checkpoint
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 import numpy as np
 from flagai.model.base_model import BaseModel
@@ -20,7 +20,7 @@ import os
 if os.getenv('ENV_TYPE') == 'deepspeed':
     from deepspeed.runtime.activation_checkpointing.checkpointing import checkpoint
 else:
-    from torch.utils.checkpoint import checkpoint
+    from oneflow.utils.checkpoint import checkpoint
 
 class Mlp(nn.Module):
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):

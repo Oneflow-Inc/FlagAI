@@ -1,5 +1,5 @@
 # os.environ["CUDA_VISIBLE_DEVICES"] = "0,2"
-import torch
+import oneflow as torch
 import os
 import argparse
 from flagai import mpu

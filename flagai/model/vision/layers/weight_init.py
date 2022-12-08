@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 import math
 import warnings
 

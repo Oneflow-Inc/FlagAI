@@ -4,7 +4,7 @@ from email.policy import default
 from operator import length_hint
 import time
 import random
-import torch
+import oneflow as torch
 import numpy as np
 import os
 import json

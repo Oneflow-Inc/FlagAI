@@ -1,5 +1,5 @@
-import torch
-from torch import nn as nn
+import oneflow as torch
+from oneflow import nn as nn
 
 try:
     from inplace_abn.functions import inplace_abn, inplace_abn_sync

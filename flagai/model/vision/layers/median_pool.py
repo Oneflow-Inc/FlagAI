@@ -1,8 +1,8 @@
 """ Median Pool
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 from .helpers import to_2tuple, to_4tuple
 
 

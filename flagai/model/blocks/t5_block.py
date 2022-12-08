@@ -1,8 +1,8 @@
 # Copyright © 2022 BAAI. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-import torch
-from torch import nn
+import oneflow as torch
+from oneflow import nn
 
 from ..layers.attentions import T5LayerCrossAttention, T5LayerSelfAttention
 from ..layers.feedforward import T5LayerFF

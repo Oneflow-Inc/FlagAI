@@ -7,9 +7,9 @@ some tasks, especially fine-grained it seems. I may end up removing this impl.
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch
-from torch import nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+from oneflow import nn as nn
+import oneflow.nn.functional as F
 
 from .conv_bn_act import ConvNormAct
 from .create_act import create_act_layer, get_act_layer

@@ -1,6 +1,6 @@
 from flagai.model.predictor.utils import RepetitionPenaltyLogitsProcessor, TemperatureLogitsProcessor, TopPLogitsProcessor, TopKLogitsProcessor, ListProcessor
-import torch
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn.functional as F
 
 
 def gpt_random_sample_use_cache(model, tokenizer, text, input_max_length, out_max_length,

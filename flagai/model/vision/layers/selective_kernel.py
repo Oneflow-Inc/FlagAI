@@ -4,8 +4,8 @@ Paper: Selective Kernel Networks (https://arxiv.org/abs/1903.06586)
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch
-from torch import nn as nn
+import oneflow as torch
+from oneflow import nn as nn
 
 from .conv_bn_act import ConvNormActAa
 from .helpers import make_divisible

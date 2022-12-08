@@ -7,7 +7,7 @@ from itertools import accumulate
 from bisect import bisect_right
 import random
 import numpy as np
-import torch
+import oneflow as torch
 import os
 from flagai.logger import log_dist
 

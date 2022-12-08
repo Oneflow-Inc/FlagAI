@@ -7,14 +7,14 @@ from dataclasses import dataclass
 from typing import Tuple, Union, Callable, Optional
 
 import numpy as np
-import torch
-import torch.nn.functional as F
-from torch import nn
+import oneflow as torch
+import oneflow.nn.functional as F
+from oneflow import nn
 import os 
 if os.getenv('ENV_TYPE') == 'deepspeed':
     from deepspeed.runtime.activation_checkpointing.checkpointing import checkpoint
 elif os.getenv('ENV_TYPE') == 'pytorch' or os.getenv('ENV_TYPE') == 'pytorchDDP':
-    from torch.utils.checkpoint import checkpoint
+    from oneflow.utils.checkpoint import checkpoint
 else :
     print(f"not support the {os.getenv('ENV_TYPE')} for checkpoint activation")
 

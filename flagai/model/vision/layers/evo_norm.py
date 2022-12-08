@@ -25,9 +25,9 @@ Hacked together by / Copyright 2020 Ross Wightman
 """
 from typing import Sequence, Union
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 
 from .create_act import create_act_layer
 from .trace_utils import _assert

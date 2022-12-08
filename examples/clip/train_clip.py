@@ -1,4 +1,4 @@
-import torch
+import oneflow as torch
 from flagai.data.dataset.mm.clip_dataset import CsvDataset, clip_transform, collate_fn
 from flagai.trainer import Trainer
 from flagai.auto_model.auto_loader import AutoLoader

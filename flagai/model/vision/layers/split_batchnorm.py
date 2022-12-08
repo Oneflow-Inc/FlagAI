@@ -11,8 +11,8 @@ achieve the 'Auxiliary BatchNorm' as described in the AdvProp Paper, section 4.2
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 
 
 class SplitBatchNorm2d(torch.nn.BatchNorm2d):

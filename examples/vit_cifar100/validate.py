@@ -1,7 +1,7 @@
-import torch
-from torchvision import transforms
-from torch.utils.data import DataLoader
-from torchvision.datasets import CIFAR100
+import oneflow as torch
+from flowvision import transforms
+from oneflow.utils.data import DataLoader
+from flowvision.datasets import CIFAR100
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 from flagai.auto_model.auto_loader import AutoLoader

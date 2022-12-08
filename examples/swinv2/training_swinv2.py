@@ -1,7 +1,7 @@
 import os
-import torch
-import torchvision.transforms as transforms
-import torchvision.datasets as datasets
+import oneflow as torch
+import flowvision.transforms as transforms
+import flowvision.datasets as datasets
 from flagai.trainer import Trainer
 from flagai.auto_model import AutoLoader
 

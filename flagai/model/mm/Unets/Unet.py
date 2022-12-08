@@ -1,9 +1,9 @@
 from abc import abstractmethod
 import math
 import numpy as np
-import torch as th
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as th
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 from abc import abstractmethod
 import math
 from flagai.model.mm.utils import (

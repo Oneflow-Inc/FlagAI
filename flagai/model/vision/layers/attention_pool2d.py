@@ -9,8 +9,8 @@ Hacked together by / Copyright 2021 Ross Wightman
 """
 from typing import Union, Tuple
 
-import torch
-import torch.nn as nn
+import oneflow as torch
+import oneflow.nn as nn
 
 from .helpers import to_2tuple
 from .pos_embed import apply_rot_embed, RotaryEmbedding

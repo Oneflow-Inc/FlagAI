@@ -6,9 +6,9 @@ BlurPool layer inspired by
 Hacked together by Chris Ha and Ross Wightman
 """
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.nn.functional as F
 import numpy as np
 from .padding import get_padding
 

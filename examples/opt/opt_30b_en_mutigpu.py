@@ -1,5 +1,5 @@
 
-import torch
+import oneflow as torch
 import os
 import argparse
 from flagai import mpu

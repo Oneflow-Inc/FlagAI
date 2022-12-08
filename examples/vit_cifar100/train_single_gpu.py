@@ -1,6 +1,6 @@
-import torch
-from torchvision import transforms
-from torchvision.datasets import CIFAR100
+import oneflow as torch
+from flowvision import transforms
+from flowvision.datasets import CIFAR100
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 from flagai.trainer import Trainer

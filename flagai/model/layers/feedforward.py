@@ -3,13 +3,13 @@
 # Licensed under the Apache License, Version 2.0 (the "License")
 # feedforward
 import os
-import torch
-import torch.nn as nn
-from torch.nn.parameter import Parameter
-from torch.nn import init
+import oneflow as torch
+import oneflow.nn as nn
+from oneflow.nn.parameter import Parameter
+from oneflow.nn import init
 from .layer_norm import T5LayerNorm
 from .activations import gelu_impl, relu, gelu_new, ACT2FN
-import torch.nn.functional as F
+import oneflow.nn.functional as F
 from flagai.mpu.initialize import get_model_parallel_rank
 from flagai.mpu.initialize import get_model_parallel_world_size
 from flagai.mpu.mappings import copy_to_model_parallel_region

@@ -19,8 +19,8 @@
 # Parts of the code here are adapted from PyTorch
 # repo: https://github.com/pytorch/pytorch
 
-import torch
-import torch.nn.functional as F
+import oneflow as torch
+import oneflow.nn.functional as F
 
 import bmtrain as bmt
 import math

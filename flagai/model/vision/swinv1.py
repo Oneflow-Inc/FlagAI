@@ -1,15 +1,15 @@
 """
 # Copyright © 2022 BAAI. All rights reserved.
 """
-import torch
-import torch.nn as nn
-import torch.utils.checkpoint as checkpoint
+import oneflow as torch
+import oneflow.nn as nn
+import oneflow.utils.checkpoint as checkpoint
 from flagai.model.vision.layers import DropPath, to_2tuple, trunc_normal_
 import os
 if os.getenv('ENV_TYPE') == 'deepspeed':
     from deepspeed.runtime.activation_checkpointing.checkpointing import checkpoint
 else:
-    from torch.utils.checkpoint import checkpoint
+    from oneflow.utils.checkpoint import checkpoint
 try:
     import os, sys
     kernel_path = os.path.abspath(os.path.join('..'))

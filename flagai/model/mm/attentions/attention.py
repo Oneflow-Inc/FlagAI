@@ -1,8 +1,8 @@
 from inspect import isfunction
 import math
-import torch
-import torch.nn.functional as F
-from torch import nn, einsum
+import oneflow as torch
+import oneflow.nn.functional as F
+from oneflow import nn, einsum
 from einops import rearrange, repeat
 
 from flagai.model.mm.utils import checkpoint

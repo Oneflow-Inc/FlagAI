@@ -4,9 +4,9 @@ Paper: `Non-Local Neural Networks With Grouped Bilinear Attentional Transforms`
     - https://openaccess.thecvf.com/content_CVPR_2020/html/Chi_Non-Local_Neural_Networks_With_Grouped_Bilinear_Attentional_Transforms_CVPR_2020_paper.html
 Adapted from original code: https://github.com/BA-Transform/BAT-Image-Classification
 """
-import torch
-from torch import nn
-from torch.nn import functional as F
+import oneflow as torch
+from oneflow import nn
+from oneflow.nn import functional as F
 
 from .conv_bn_act import ConvNormAct
 from .helpers import make_divisible

@@ -12,12 +12,12 @@ try:
 except Exception:
     pass
 
-import torch
+import oneflow as torch
 import argparse
 import os
 import random
 import numpy as np
-import torch.distributed as dist
+import oneflow.distributed as dist
 from flagai.logger import log_dist
 from torch.utils.tensorboard import SummaryWriter
 from flagai.utils import load_checkpoint, save_checkpoint, load_optim, load_rng

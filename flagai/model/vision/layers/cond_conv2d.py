@@ -9,9 +9,9 @@ Hacked together by / Copyright 2020 Ross Wightman
 import math
 from functools import partial
 import numpy as np
-import torch
-from torch import nn as nn
-from torch.nn import functional as F
+import oneflow as torch
+from oneflow import nn as nn
+from oneflow.nn import functional as F
 
 from .helpers import to_2tuple
 from .conv2d_same import conv2d_same

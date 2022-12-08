@@ -17,7 +17,7 @@
 # limitations under the License.
 """Transformer."""
 
-import torch
+import oneflow as torch
 
 from flagai.model.layers.attentions import ParallelSelfAttention
 from flagai.model.layers.attentions import ParallelCrossAttention
@@ -26,7 +26,7 @@ from flagai.model.layers.feedforward import MLPForward
 try:
     from apex.normalization.fused_layer_norm import FusedLayerNorm as LayerNorm
 except:
-    from torch.nn import LayerNorm
+    from oneflow.nn import LayerNorm
 
 
 class GLMBlock(torch.nn.Module):

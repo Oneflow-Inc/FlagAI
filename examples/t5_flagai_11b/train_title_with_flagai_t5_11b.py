@@ -6,9 +6,9 @@ from flagai.model.t5_model import T5ForConditionalGeneration
 from transformers import T5Tokenizer
 from flagai.data.tokenizer import Tokenizer
 from flagai.model.predictor.predictor import Predictor
-from torch.utils.data import Dataset
+from oneflow.utils.data import Dataset
 import os
-import torch
+import oneflow as torch
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 
