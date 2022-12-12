@@ -133,8 +133,7 @@ class DDIMSampler(object):
 
         for i, step in enumerate(iterator):
             index = total_steps - i - 1
-            # TODO:(oneflow) flow.full don't support step is an numpy ndarray
-            ts = torch.full((b,), step.item(), device=device, dtype=torch.long)
+            ts = torch.full((b,), step, device=device, dtype=torch.long)
             if mask is not None:
                 assert x0 is not None
                 img_orig = self.model.q_sample(x0, ts)  # TODO: deterministic forward pass?
@@ -188,8 +187,7 @@ class DDIMSampler(object):
         a_t = torch.full((b, 1, 1, 1), alphas[index], device=device)
         a_prev = torch.full((b, 1, 1, 1), alphas_prev[index], device=device)
         sigma_t = torch.full((b, 1, 1, 1), sigmas[index], device=device)
-        # TODO:(oneflow) flow.full support numpy(ndarray)
-        sqrt_one_minus_at = torch.full((b, 1, 1, 1), sqrt_one_minus_alphas[index].item(),device=device)
+        sqrt_one_minus_at = torch.full((b, 1, 1, 1), sqrt_one_minus_alphas[index],device=device)
 
         # current prediction for x_0
         pred_x0 = (x - sqrt_one_minus_at * e_t) / a_t.sqrt()

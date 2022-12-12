@@ -291,10 +291,12 @@ def make_ddim_sampling_parameters(alphacums,
     alphas = alphacums[ddim_timesteps]
     alphas_prev = np.asarray([alphacums[0]] +
                              alphacums[ddim_timesteps[:-1]].tolist())
-    alphas_prev_tensor = torch.tensor(alphas_prev)
 
     # according the the formula provided in https://arxiv.org/abs/2010.02502
+    # sigmas = eta * np.sqrt(
+    #     (1 - alphas_prev) / (1 - alphas) * (1 - alphas / alphas_prev))
     # TODO:(oneflow) tensor / numpy(ndarray) TypeError
+    alphas_prev_tensor = torch.from_numpy(alphas_prev)
     sigmas = eta * np.sqrt(
         (1 - alphas_prev_tensor) / (1 - alphas) * (1 - alphas / alphas_prev_tensor))
     if verbose:
