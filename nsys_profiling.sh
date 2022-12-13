@@ -2,7 +2,7 @@
 nsys_path=/usr/local/cuda/nsight-systems-2022.1.3
 
 # set params
-ddim_steps=20
+ddim_steps=50
 sed -i "s/^ddim_steps = [[:digit:]]*/ddim_steps = $ddim_steps/g " diffusion_demo.py
 
 # save to nsys file
