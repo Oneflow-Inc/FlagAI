@@ -14,5 +14,7 @@ loader = AutoLoader(task_name="text2img", #contrastive learning
 model = loader.get_model()
 model.eval()
 model.to(device)
+# Generate image
+ddim_steps = 50
 predictor = Predictor(model)
-predictor.predict_generate_images(prompt)
+predictor.predict_generate_images(prompt, ddim_steps=ddim_steps)
