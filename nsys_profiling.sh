@@ -12,4 +12,4 @@ $nsys_path/bin/nsys profile --stats=true -o altdiffusion_${time}_${ddim_steps}st
 
 
 # checkout changes
-# git checkout diffusion_demo.py
+git checkout diffusion_demo.py
