@@ -542,9 +542,6 @@ class LatentDiffusion(DDPM):
         if cond_stage_config == '__is_unconditional__':
             conditioning_key = None
         
-        # conditioning_key:crossattn 
-
-
         ckpt_path = kwargs.pop("ckpt_path", None)
         ignore_keys = kwargs.pop("ignore_keys", [])
         super().__init__(conditioning_key=conditioning_key, *args, **kwargs)
